@@ -1,4 +1,5 @@
 import hashlib
+import time
 from blockchain import Blockchain
 from encoder import encode_data
 from decoder import decode_data
@@ -21,6 +22,8 @@ def record_hashes(data_pieces, blockchain):
     return hashes
 
 def main():
+    start_time = time.time()
+    
     # サンプルデータ
     data = "これはシミュレーションプロジェクトのためのテストデータです。".encode('utf-8')
     num_pieces = 4
@@ -44,6 +47,10 @@ def main():
     # データを復号化
     decoded_data = decode_data(data_pieces)
     print(f"復号化されたデータ: {decoded_data.decode('utf-8')}")
+    
+    end_time = time.time()
+    elapsed_time = end_time - start_time
+    print(f"プログラムの実行時間: {elapsed_time}秒")
 
 if __name__ == "__main__":
     main()
