@@ -1,9 +1,9 @@
-def decode_data(data_pieces):
-    data = b''.join(data_pieces)
-    return data
+def decode_data(data_pieces):  # データのピースを受け取り、それらを結合して復号化する関数を定義
+    data = b''.join(data_pieces)  # バイト列のリストを結合して一つのバイト列にする
+    return data  # 結合したデータを返す
 
-def main():
+def main():  # メイン処理を定義する関数
     # ここにメイン処理を実装します
-    pass
+    pass  # 現在は何も実装されていないことを示す
 
 # このファイルは符号化されたデータを復号化するための関数を提供します。
